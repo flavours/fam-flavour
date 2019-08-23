@@ -1,0 +1,5 @@
+click
+strictyaml
+libflavour==0.0.12
+attrs
+python-slugify
