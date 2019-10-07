@@ -32,6 +32,11 @@ RUN mkdir -p /flavour/fam-flavour/policy
 COPY policy/*.rego /flavour/fam-flavour/policy/
 
 
-COPY bin/add.py /bin/add
-COPY bin/remove.py /bin/remove
-COPY bin/check.py /bin/check
+COPY bin/add.py /bin/fam-flavour/add
+COPY bin/remove.py /bin/fam-flavour/remove
+COPY bin/check.py /bin/fam-flavour/check
+
+
+RUN ln -s /bin/fam-flavour/add /bin/add
+RUN ln -s /bin/fam-flavour/check /bin/check
+RUN ln -s /bin/fam-flavour/remove /bin/remove
