@@ -7,7 +7,6 @@ import sys
 import click
 
 import libflavour
-from strictyaml import load
 
 
 def log(string):
@@ -15,7 +14,7 @@ def log(string):
 
 
 def check_structure(yaml):
-    load(yaml, libflavour.schema.schema_addon)
+    libflavour.Addon(yaml)
 
 
 def check_policies(yaml):
